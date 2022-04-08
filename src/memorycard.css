@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "ITC American Typewriter";
+  src: url("//db.onlinewebfonts.com/t/bf9940413066bf65037e293ebc4c068e.eot");
+  src: url("//db.onlinewebfonts.com/t/bf9940413066bf65037e293ebc4c068e.eot?#iefix")
+  format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bf9940413066bf65037e293ebc4c068e.woff2")
+  format("woff2"), url("//db.onlinewebfonts.com/t/bf9940413066bf65037e293ebc4c068e.woff")
+  format("woff"), url("//db.onlinewebfonts.com/t/bf9940413066bf65037e293ebc4c068e.ttf")
+  format("truetype"),
+  url("//db.onlinewebfonts.com/t/bf9940413066bf65037e293ebc4c068e.svg#ITC American Typewriter")
+  format("svg");
+}
+
+
+.memory-card img {
+  height: 265px;
+  width: 265px;
+  margin: 5px;
+}
+
+.memory-card {
+  height: 350px;
+  width: 280px;
+  border: black;
+  border-style: solid;
+  background-color: rgb(172, 49, 172);
+  color: white;
+  font-family: ITC American Typewriter;
+
+}
+
+h1 {
+  font-family: "ITC American Typewriter"
+}
+
+@import url(//db.onlinewebfonts.com/c/bf9940413066bf65037e293ebc4c068e?family=ITC+American+Typewriter);

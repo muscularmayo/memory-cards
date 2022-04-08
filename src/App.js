@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import MemoryCard from './MemoryCard.js';
 import React, { useState } from 'react';
+import michael from './images/michael_scott.jpeg'
 
 function App() {
   const [score, setScore] = useState(0)
@@ -22,7 +23,10 @@ function App() {
 
   return (
     <div className="App">
-      Memory Cards (:
+      <h1>
+        The Office - Memory Game
+      </h1>
+      <MemoryCard src={michael}name="Michael Scott" />
     </div>
   );
 }
