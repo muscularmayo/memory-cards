@@ -3,10 +3,11 @@ import './App.css';
 import MemoryCard from './MemoryCard.js';
 import React, { useState } from 'react';
 import michael from './images/michael_scott.jpeg'
+import Score from './Score.js'
 
 function App() {
   const [score, setScore] = useState(0)
-  const [bestScore, setBestScore] = useState(0)
+  const [bestScore, setBestScore] = useState(3)
   const [chosenCards, setChosenCards] = useState([])
 
   const memoryCardClick = (card) => {
@@ -26,6 +27,7 @@ function App() {
       <h1>
         The Office - Memory Game
       </h1>
+      <Score bestScore={bestScore} currentScore={score}/>
       <MemoryCard src={michael}name="Michael Scott" />
     </div>
   );
