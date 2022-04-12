@@ -2,14 +2,184 @@ import logo from './logo.svg';
 import './App.css';
 import MemoryCardGrid from './MemoryCardGrid.js';
 import React, { useState } from 'react';
-import michael from './images/michael_scott.jpeg'
 import Header from './Header.js'
+import michael from './images/michael_scott.jpeg'
+import andy from './images/andy_bernard.webp'
+import angela from './images/angela_martin.webp'
+import cathy from './images/cathy_simms.jpg'
+import charles from './images/charles_miner.jpeg'
+import clark from './images/clark_green.jpeg'
+import creed from './images/creed_bratton.png'
+import darryl from './images/darryl_philbin.png'
+import david from './images/david_wallace.jpeg'
+import deangelo from './images/deangelo_vickers.jpeg'
+import dwight from './images/dwight_schrute.jpeg'
+import erin from './images/erin_hannon.jpeg'
+import gabe from './images/gabe_lewis.jpeg'
+import hank from './images/hank_tate.png'
+import holly from './images/holly_flax.jpeg'
+import jan from './images/jan_levinson.png'
+import jim from './images/jim_halpert.jpeg'
+import jo from './images/jo_bennett.jpeg'
+import karen from './images/karen_flilipelli.jpeg'
+import kelly from './images/kelly_kapoor.png';
+import kevin from './images/kevin_malone.jpeg';
+import meredith from './images/meredith_palmer.png';
+import nate from './images/nate_nickerson.jpeg';
+import nellie from './images/nellie_bertram.jpeg';
+import oscar from './images/oscar_martinez.png'
+import pam from './images/pam_beesly.webp'
+import pete from './images/pete_miller.jpeg'
+import phyllis from './images/phyllis_vance.png'
+import robert from './images/robert_california.jpeg'
+import roy from './images/roy_anderson.jpeg'
+import ryan from './images/ryan_howard.jpeg'
+import stanley from './images/stanley_hudson.png'
+import toby from './images/toby_flenderson.png'
+import todd from './images/todd_packer.jpeg'
 
 function App() {
   const [score, setScore] = useState(0)
   const [bestScore, setBestScore] = useState(1)
   const [chosenCards, setChosenCards] = useState([])
-  const [cardDisplayOrder, setCardDisplayOrder] = useState([])
+  const [cardDisplay, setCardDisplay] = useState([
+    {
+      name: 'Michael Scott',
+      image: michael,
+    },
+    {
+      name: 'Andy Bernard',
+      image: andy,
+    },
+    {
+      name: 'Angela Martin',
+      image: angela,
+    },
+    {
+      name: 'Cathy Simms',
+      image: cathy,
+    },
+    {
+      name: 'Charles Miner',
+      image: charles,
+    },
+    {
+      name: 'Clark Green',
+      image: clark,
+    },
+    {
+      name: 'Creed Bratton',
+      image: creed,
+    },
+    {
+      name: 'Darryl Philbin',
+      image: darryl,
+    },
+    {
+      name: 'David Wallace',
+      image: david,
+    },
+    {
+      name: 'Deangelo Vickers',
+      image: deangelo,
+    },
+    {
+      name: 'Dwight K. Schrute',
+      image: dwight,
+    },
+    {
+      name: 'Erin Hannon',
+      image: erin,
+    },
+    {
+      name: 'Gabe Lewis',
+      image: gabe,
+    },
+    {
+      name: 'Hank Tate',
+      image: hank,
+    },
+    {
+      name: 'Holly Flax',
+      image: holly,
+    },
+    {
+      name: 'Jan Levinson',
+      image: jan,
+    },
+    {
+      name: 'Jim Halpert',
+      image: jim
+    },
+    {
+      name: 'Jo Bennett',
+      image: jo,
+    },
+    {
+      name: 'Karen Filippelli',
+      image: karen,
+    },
+    {
+      name: 'Kelly Kapoor',
+      image: kelly,
+    },
+    {
+      name: 'Kevin Malone',
+      image: kevin,
+    },
+    {
+      name: 'Meredith Palmer',
+      image: meredith,
+    },
+    {
+      name: 'Nate Nickerson',
+      image: nate,
+    },
+    {
+      name: 'Nellie Bertram',
+      image: nellie,
+    },
+    {
+      name: 'Oscar Martinez',
+      image: oscar,
+    },
+    {
+      name: 'Pam Beesly',
+      image: pam,
+    },
+    {
+      name: 'Pete Miller',
+      image: pete,
+    },
+    {
+      name: 'Phyllis Vance',
+      image: phyllis
+    },
+    {
+      name: 'Robert California',
+      image: robert,
+    },
+    {
+      name: 'Roy Anderson',
+      image: roy,
+    },
+    {
+      name: 'Ryan Howard',
+      image: ryan,
+    },
+    {
+      name: 'Stanley Hudson',
+      image: stanley,
+    },
+    {
+      name: 'Toby Flenderson',
+      image: toby,
+    },
+    {
+      name: 'Todd Packer',
+      image: todd,
+    }
+  ])
   /*
   state is {
     score: currentScore,
@@ -44,7 +214,7 @@ function App() {
   return (
     <div className="App">
       <Header bestScore={bestScore} currentScore={score}/>
-      <MemoryCardGrid />
+      <MemoryCardGrid cardDisplay={cardDisplay}/>
     </div>
   );
 }

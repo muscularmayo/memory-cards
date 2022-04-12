@@ -33,7 +33,7 @@
   display: grid;
   padding: 15px 20px;
   margin-top: 15px;
-  grid-template-columns: repeat(auto-fit,minmax(200px,270px));
+  grid-template-columns: repeat(auto-fit,minmax(200px,290px));
   justify-content: space-around;
   grid-column-gap: 10px;
   column-gap: 10px;
