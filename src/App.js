@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import MemoryCard from './MemoryCard.js';
+import MemoryCardGrid from './MemoryCardGrid.js';
 import React, { useState } from 'react';
 import michael from './images/michael_scott.jpeg'
 import Header from './Header.js'
@@ -9,6 +9,7 @@ function App() {
   const [score, setScore] = useState(0)
   const [bestScore, setBestScore] = useState(1)
   const [chosenCards, setChosenCards] = useState([])
+  const [cardDisplayOrder, setCardDisplayOrder] = useState([])
   /*
   state is {
     score: currentScore,
@@ -43,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Header bestScore={bestScore} currentScore={score}/>
-      <MemoryCard src={michael}name="Michael Scott" />
+      <MemoryCardGrid />
     </div>
   );
 }
