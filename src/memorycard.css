@@ -28,7 +28,20 @@
 
 }
 
-h1 {
+.memory-card-grid {
+  width: 100%;
+  display: grid;
+  padding: 15px 20px;
+  margin-top: 15px;
+  grid-template-columns: repeat(auto-fit,minmax(200px,270px));
+  justify-content: space-around;
+  grid-column-gap: 10px;
+  column-gap: 10px;
+  grid-row-gap: 20px;
+  row-gap: 20px;
+}
+
+* {
   font-family: "ITC American Typewriter"
 }
 
