@@ -10,7 +10,7 @@ export default function MemoryCardGrid (props) {
 
   const display = props.cardDisplay.map((obj, index) => {
     return (
-    <MemoryCard src={obj.image} name={obj.name} key={index} />
+    <MemoryCard src={obj.image} name={obj.name} key={index} memoryCardClick={props.memoryCardClick}/>
   )})
 
   return (

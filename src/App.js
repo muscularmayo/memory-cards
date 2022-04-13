@@ -40,7 +40,7 @@ import todd from './images/todd_packer.jpeg'
 
 function App() {
   const [score, setScore] = useState(0)
-  const [bestScore, setBestScore] = useState(1)
+  const [bestScore, setBestScore] = useState(0)
   const [chosenCards, setChosenCards] = useState([])
   const [cardDisplay, setCardDisplay] = useState([
     {
@@ -184,7 +184,8 @@ function App() {
   state is {
     score: currentScore,
     bestScore: bestScore,
-    chosenCards: array of cards that are on this current run of memory
+    chosenCards: array of cards that are on this current run of memory (can be an array of strings) ex: ['michael scott'...]
+    cardDisplay: all of the memory cards in an array, the order is the display order
   }
 
   score cannot be > bestScore
@@ -199,12 +200,39 @@ function App() {
 
 
   */
-  const memoryCardClick = (card) => {
+  const shuffle = (array) => {
+    let currentIndex = array.length,  randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex !== 0) {
+
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+  }
+
+  const determineScore = () => {
+    //everytime we click something we can use this function to do score stuff? remains to be seen just here for organization
+  }
+
+  const memoryCardClick = (cardName) => {
+    //cardName is just the name on the card
+
     //when the user clicks on a image card we have to choose 1 of 2 options
     //if card is not already in chosenCards array, make a copy of chosenCards, push new card into array, change chosenCards
+
     //also increment the score up and determineBestScore()
+
     //else if card is in chosenCards array
     //setScore(0) and setChosenCards([])
+
   }
 
   const determineBestScore = () => {
@@ -214,9 +242,17 @@ function App() {
   return (
     <div className="App">
       <Header bestScore={bestScore} currentScore={score}/>
-      <MemoryCardGrid cardDisplay={cardDisplay}/>
+      <MemoryCardGrid memoryCardClick={memoryCardClick} cardDisplay={cardDisplay}/>
     </div>
   );
 }
 
 export default App;
+
+/* notes for next step:
+
+when i click on a card, we check that specific card against the chosenCards array. we can use the name, pass it up in the
+function which will call memoryCardClick from this, and i guess we'll figure it out from there.
+
+
+*/
