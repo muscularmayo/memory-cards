@@ -3,12 +3,13 @@ import './memorycard.css';
 
 export default function MemoryCard (props) {
 
-  const cardClick = (name) => {
-
+  const cardClick = (e) => {
+    console.log(e, props.name)
+    props.memoryCardClick(props.name)
   }
 
   return (
-    <div className="memory-card">
+    <div onClick={cardClick} className="memory-card">
       <img src={props.src} alt={props.name}/>
       {props.name}
     </div>

@@ -224,14 +224,19 @@ function App() {
 
   const memoryCardClick = (cardName) => {
     //cardName is just the name on the card
+    console.log(cardName, typeof cardName)
 
     //when the user clicks on a image card we have to choose 1 of 2 options
-    //if card is not already in chosenCards array, make a copy of chosenCards, push new card into array, change chosenCards
+    if (chosenCards.includes(cardName)) {
+      //else if card is in chosenCards array
+      //setScore(0) and setChosenCards([])
+    } else {
+      //if card is not already in chosenCards array, make a copy of chosenCards, push new card into array, change chosenCards
+      //also increment the score up and determineBestScore()
 
-    //also increment the score up and determineBestScore()
+    }
 
-    //else if card is in chosenCards array
-    //setScore(0) and setChosenCards([])
+
 
   }
 
