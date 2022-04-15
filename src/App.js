@@ -1,38 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 import MemoryCardGrid from './MemoryCardGrid.js';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header.js'
 import michael from './images/michael_scott.jpeg'
 import andy from './images/andy_bernard.webp'
 import angela from './images/angela_martin.webp'
-import cathy from './images/cathy_simms.jpg'
+import cathy from './images/cathy_simms.jpeg'
 import charles from './images/charles_miner.jpeg'
 import clark from './images/clark_green.jpeg'
-import creed from './images/creed_bratton.png'
-import darryl from './images/darryl_philbin.png'
+import creed from './images/creed_bratton.webp'
+import darryl from './images/darryl_philbin.webp'
 import david from './images/david_wallace.jpeg'
 import deangelo from './images/deangelo_vickers.jpeg'
 import dwight from './images/dwight_schrute.jpeg'
 import erin from './images/erin_hannon.jpeg'
 import gabe from './images/gabe_lewis.jpeg'
-import hank from './images/hank_tate.png'
-import holly from './images/holly_flax.jpeg'
+import hank from './images/hank_tate.webp'
+import holly from './images/holly_flax.webp'
 import jan from './images/jan_levinson.png'
 import jim from './images/jim_halpert.jpeg'
-import jo from './images/jo_bennett.jpeg'
+import jo from './images/jo_bennett.png'
 import karen from './images/karen_flilipelli.jpeg'
-import kelly from './images/kelly_kapoor.png';
-import kevin from './images/kevin_malone.jpeg';
-import meredith from './images/meredith_palmer.png';
+import kelly from './images/kelly_kapoor.jpeg';
+import kevin from './images/kevin_malone.webp';
+import meredith from './images/meredith_palmer.webp';
 import nate from './images/nate_nickerson.jpeg';
-import nellie from './images/nellie_bertram.jpeg';
-import oscar from './images/oscar_martinez.png'
+import nellie from './images/nellie_bertram.webp';
+import oscar from './images/oscar_martinez.jpeg'
 import pam from './images/pam_beesly.webp'
-import pete from './images/pete_miller.jpeg'
-import phyllis from './images/phyllis_vance.png'
+import pete from './images/pete_miller.webp'
+import phyllis from './images/phyllis_vance.webp'
 import robert from './images/robert_california.jpeg'
-import roy from './images/roy_anderson.jpeg'
+import roy from './images/roy_anderson.webp'
 import ryan from './images/ryan_howard.jpeg'
 import stanley from './images/stanley_hudson.png'
 import toby from './images/toby_flenderson.png'
@@ -48,24 +47,60 @@ function App() {
       image: michael,
     },
     {
+      name: 'Jim Halpert',
+      image: jim
+    },
+    {
+      name: 'Pam Beesly',
+      image: pam,
+    },
+    {
+      name: 'Dwight K. Schrute',
+      image: dwight,
+    },
+    {
+      name: 'Ryan Howard',
+      image: ryan,
+    },
+    {
+      name: 'Kelly Kapoor',
+      image: kelly,
+    },
+    {
+      name: 'Stanley Hudson',
+      image: stanley,
+    },
+    {
+      name: 'Toby Flenderson',
+      image: toby,
+    },
+    {
+      name: 'Roy Anderson',
+      image: roy,
+    },
+    {
+      name: 'Jan Levinson',
+      image: jan,
+    },
+    {
+      name: 'Todd Packer',
+      image: todd,
+    },
+    {
+      name: 'Kevin Malone',
+      image: kevin,
+    },
+    {
+      name: 'Meredith Palmer',
+      image: meredith,
+    },
+    {
       name: 'Andy Bernard',
       image: andy,
     },
     {
       name: 'Angela Martin',
       image: angela,
-    },
-    {
-      name: 'Cathy Simms',
-      image: cathy,
-    },
-    {
-      name: 'Charles Miner',
-      image: charles,
-    },
-    {
-      name: 'Clark Green',
-      image: clark,
     },
     {
       name: 'Creed Bratton',
@@ -80,12 +115,12 @@ function App() {
       image: david,
     },
     {
-      name: 'Deangelo Vickers',
-      image: deangelo,
+      name: 'Oscar Martinez',
+      image: oscar,
     },
     {
-      name: 'Dwight K. Schrute',
-      image: dwight,
+      name: 'Deangelo Vickers',
+      image: deangelo,
     },
     {
       name: 'Erin Hannon',
@@ -104,14 +139,6 @@ function App() {
       image: holly,
     },
     {
-      name: 'Jan Levinson',
-      image: jan,
-    },
-    {
-      name: 'Jim Halpert',
-      image: jim
-    },
-    {
       name: 'Jo Bennett',
       image: jo,
     },
@@ -120,32 +147,12 @@ function App() {
       image: karen,
     },
     {
-      name: 'Kelly Kapoor',
-      image: kelly,
-    },
-    {
-      name: 'Kevin Malone',
-      image: kevin,
-    },
-    {
-      name: 'Meredith Palmer',
-      image: meredith,
-    },
-    {
       name: 'Nate Nickerson',
       image: nate,
     },
     {
       name: 'Nellie Bertram',
       image: nellie,
-    },
-    {
-      name: 'Oscar Martinez',
-      image: oscar,
-    },
-    {
-      name: 'Pam Beesly',
-      image: pam,
     },
     {
       name: 'Pete Miller',
@@ -160,25 +167,17 @@ function App() {
       image: robert,
     },
     {
-      name: 'Roy Anderson',
-      image: roy,
+      name: 'Cathy Simms',
+      image: cathy,
     },
     {
-      name: 'Ryan Howard',
-      image: ryan,
+      name: 'Charles Miner',
+      image: charles,
     },
     {
-      name: 'Stanley Hudson',
-      image: stanley,
+      name: 'Clark Green',
+      image: clark,
     },
-    {
-      name: 'Toby Flenderson',
-      image: toby,
-    },
-    {
-      name: 'Todd Packer',
-      image: todd,
-    }
   ])
   /*
   state is {
@@ -195,11 +194,9 @@ function App() {
   1. check if that card is in chosenCards list
   2. if not, add to chosenCards, set score to length, determine if bestScore needs to be updated
   3. if yes, reset chosenCards, set score to 0, leave bestScore as is
-
-
-
-
   */
+
+
   const shuffle = (array) => {
     let currentIndex = array.length,  randomIndex;
 
@@ -218,8 +215,23 @@ function App() {
     return array;
   }
 
-  const determineScore = () => {
+  const incrementScore = () => {
     //everytime we click something we can use this function to do score stuff? remains to be seen just here for organization
+    let newScore = score + 1
+    setScore(newScore)
+    if (newScore > bestScore) {
+      setBestScore(newScore)
+    }
+    if(newScore === 34) {
+      console.log('YOU WIN!')
+      //we'll figure something out here, like a game loop of play again? or something
+    }
+  }
+
+  const shuffleDisplay = () => {
+    let currentDisplay = [...cardDisplay]
+    let shuffledDisplay = shuffle(currentDisplay)
+    setCardDisplay(shuffledDisplay)
   }
 
   const memoryCardClick = (cardName) => {
@@ -235,25 +247,19 @@ function App() {
     } else {
       //if card is not already in chosenCards array, make a copy of chosenCards, push new card into array, change chosenCards
       //also increment the score up and determineBestScore()
-      let newScore = score + 1
-      setScore(newScore, determineBestScore())
+      incrementScore()
       let currentChosenCards = [...chosenCards]
       currentChosenCards.push(cardName)
       setChosenCards(currentChosenCards)
-      //determineBestScore()
-
     }
-
-
+    shuffleDisplay()
 
   }
 
-  const determineBestScore = () => {
-    //if score is greater than bestScore, change bestScore to score (?)
-    if (score > bestScore) {
-      setBestScore(score)
-    }
-  }
+
+  useEffect(() => {
+    shuffleDisplay()
+  }, [])
 
   return (
     <div className="App">

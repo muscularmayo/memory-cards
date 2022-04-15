@@ -5,8 +5,8 @@ import CurrentScore from './CurrentScore.js'
 export default function Score (props) {
   return (
     <div className="score-card">
-      <BestScore bestScore={props.bestScore}/>
       <CurrentScore currentScore={props.currentScore}/>
+      <BestScore bestScore={props.bestScore}/>
     </div>
   )
 }
