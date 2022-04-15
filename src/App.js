@@ -230,9 +230,17 @@ function App() {
     if (chosenCards.includes(cardName)) {
       //else if card is in chosenCards array
       //setScore(0) and setChosenCards([])
+      setScore(0)
+      setChosenCards([])
     } else {
       //if card is not already in chosenCards array, make a copy of chosenCards, push new card into array, change chosenCards
       //also increment the score up and determineBestScore()
+      let newScore = score + 1
+      setScore(newScore, determineBestScore())
+      let currentChosenCards = [...chosenCards]
+      currentChosenCards.push(cardName)
+      setChosenCards(currentChosenCards)
+      //determineBestScore()
 
     }
 
@@ -242,6 +250,9 @@ function App() {
 
   const determineBestScore = () => {
     //if score is greater than bestScore, change bestScore to score (?)
+    if (score > bestScore) {
+      setBestScore(score)
+    }
   }
 
   return (
