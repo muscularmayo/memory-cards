@@ -227,8 +227,8 @@ function App() {
     if (newScore > bestScore) {
       setBestScore(newScore)
     }
-    if(newScore === 34) {
-      console.log('YOU WIN!')
+    if(newScore === cardDisplay.length) {
+      alert('YOU WIN!')
       //we'll figure something out here, like a game loop of play again? or something
     }
   }
@@ -241,7 +241,7 @@ function App() {
 
   const memoryCardClick = (cardName) => {
     //cardName is just the name on the card
-    console.log(cardName, typeof cardName)
+    //console.log(cardName, typeof cardName)
 
     //when the user clicks on a image card we have to choose 1 of 2 options
     if (chosenCards.includes(cardName)) {

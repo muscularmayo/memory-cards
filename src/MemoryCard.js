@@ -4,7 +4,7 @@ import './memorycard.css';
 export default function MemoryCard (props) {
 
   const cardClick = (e) => {
-    console.log(e, props.name)
+    //console.log(e, props.name)
     props.memoryCardClick(props.name)
   }
 
