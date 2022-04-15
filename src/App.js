@@ -24,6 +24,7 @@ import karen from './images/karen_flilipelli.jpeg'
 import kelly from './images/kelly_kapoor.jpeg';
 import kevin from './images/kevin_malone.webp';
 import meredith from './images/meredith_palmer.webp';
+import mose from './images/mose_schrute.webp'
 import nate from './images/nate_nickerson.jpeg';
 import nellie from './images/nellie_bertram.webp';
 import oscar from './images/oscar_martinez.jpeg'
@@ -45,6 +46,10 @@ function App() {
     {
       name: 'Michael Scott',
       image: michael,
+    },
+    {
+      name: 'Mose Schrute',
+      image: mose,
     },
     {
       name: 'Jim Halpert',
